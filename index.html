@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nitin Kumar Singh — AI Developer & Software Engineer</title>
+  <meta name="description"
+    content="Nitin Kumar Singh — AI Developer, Software Engineer, DSA problem solver. Portfolio showcasing projects, skills, and achievements.">
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="./assets/css/portfolio.css?v=3.1">
+</head>
+
+<body>
+
+  <!-- ===== SCROLL PROGRESS ===== -->
+<div id="scroll-progress"><div id="scroll-fill"></div></div>
+
+  <!-- ===== AMBIENT BACKGROUND ===== -->
+  <div class="fog-wrap">
+    <div class="fog-1"></div>
+    <div class="fog-2"></div>
+  </div>
+  <canvas id="bg-canvas"></canvas>
+  <div class="bg-glow"></div>
+
+  <!-- ===== CURSOR ===== -->
+  <div id="cur-dot"></div>
+  <div id="cur-ring"></div>
+
+  <!-- ===== CINEMATIC OVERLAY ===== -->
+  <div class="cinema-grain"></div>
+  <div class="cinema-vignette"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">&lt;<span>NS</span> /&gt;</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#dsa">DSA</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="https://github.com/Nitinsingh7643" target="_blank" class="nav-icon" title="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+      <a href="https://linkedin.com/in/nitinsingh9550" target="_blank" class="nav-icon" title="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+      </a>
+      <a href="mailto:nitinsingh6207816283@gmail.com" class="nav-icon" title="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+      </a>
+      <button id="theme-btn" title="Toggle theme" class="nav-icon" style="background:transparent;border:0;cursor:pointer;">☀</button>
+      <a href="./CVPEP.pdf" download class="btn-glow" style="padding: 10px 24px; font-size: 0.9rem;">Resume</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="section">
+    <div class="hero-content" data-aos="up">
+      <div class="hero-roles">
+        <span class="status-dot"></span> AVAILABLE FOR NEW PROJECTS
+      </div>
+      <h1 class="hero-heading">Hi, I'm <span class="gradient-text">Nitin Kumar</span></h1>
+      <h2 class="hero-subheading">I am an <span id="typed-role" style="text-decoration: underline; text-decoration-color: var(--cyan);">AI Developer</span></h2>
+      <p class="hero-tagline">Building scalable, high-performance systems and intelligent algorithms with a focus on modern engineering practices and robust architectures.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-glow">Explore Work</a>
+        <a href="#contact" class="btn-outline">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="scene-mask"></div>
+    <div class="section-header" data-aos="reveal-left"><span class="sec-tag">01.</span>
+      <h2>About Me</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-img-wrap" data-aos="right">
+        <img src="./Nitin.png" alt="Nitin Kumar Singh" class="about-img">
+      </div>
+      <div class="about-text" data-aos="left">
+        <p>I'm a <span class="highlight">Computer Science student</span> passionate about AI, machine learning, and
+          building intelligent tools. Currently pursuing my <span class="highlight">B.Tech at LPU</span>, I focus on
+          solving complex problems through efficient algorithms and modern tech stacks.</p>
+        <p>My journey is driven by curiosity — from architecting full-stack applications to researching the latest in
+          <span class="highlight">Large Language Models</span>. I'm a firm believer in the power of open source and
+          continuous learning.</p>
+        <div class="about-facts">
+          <div class="fact">📍 Sasaram, Bihar</div>
+          <div class="fact">🎓 B.Tech CS (2023–27)</div>
+          <div class="fact">💡 AI/ML Enthusiast</div>
+          <div class="fact">🏆 5★ HackerRank</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section">
+    <div class="scene-mask"></div>
+    <div class="section-header" data-aos="reveal-right"><span class="sec-tag">02.</span>
+      <h2>Tech Arsenal</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-cat glass" data-aos="up">
+        <h3>🖥 Core Engineering</h3>
+        <div class="skill-items">
+          <div class="skill-item"><span style="display:flex; align-items:center; gap:6px;"><i class="devicon-cplusplus-plain colored" style="font-size: 1.2rem;"></i> C++ / DSA</span>
+            <div class="bar-wrap">
+              <div class="bar-fill" data-w="92"></div>
+            </div><span class="pct">92%</span>
+          </div>
+          <div class="skill-item"><span style="display:flex; align-items:center; gap:6px;"><i class="devicon-python-plain colored" style="font-size: 1.2rem;"></i> Python</span>
+            <div class="bar-wrap">
+              <div class="bar-fill" data-w="88"></div>
+            </div><span class="pct">88%</span>
+          </div>
+          <div class="skill-item"><span style="display:flex; align-items:center; gap:6px;"><i class="devicon-java-plain colored" style="font-size: 1.2rem;"></i> Java</span>
+            <div class="bar-wrap">
+              <div class="bar-fill" data-w="75"></div>
+            </div><span class="pct">75%</span>
+          </div>
+          <div class="skill-item"><span style="display:flex; align-items:center; gap:6px;"><i class="devicon-bash-plain colored" style="font-size: 1.2rem;"></i> Security</span>
+            <div class="bar-wrap">
+              <div class="bar-fill" data-w="80"></div>
+            </div><span class="pct">80%</span>
+          </div>
+        </div>
+      </div>
+      <div class="skill-cat glass" data-aos="up" data-aos-delay="100">
+        <h3>🌐 Full Stack Dev</h3>
+        <div class="skill-items">
+          <div class="skill-item"><span style="display:flex; align-items:center; gap:6px;"><i class="devicon-nextjs-plain" style="font-size: 1.2rem;"></i> Next.js</span>
+            <div class="bar-wrap">
+              <div class="bar-fill" data-w="85"></div>
+            </div><span class="pct">85%</span>
+          </div>
+          <div class="skill-item"><span style="display:flex; align-items:center; gap:6px;"><i class="devicon-nodejs-plain colored" style="font-size: 1.2rem;"></i> Node.js</span>
+            <div class="bar-wrap">
+              <div class="bar-fill" data-w="82"></div>
+            </div><span class="pct">82%</span>
+          </div>
+          <div class="skill-item"><span style="display:flex; align-items:center; gap:6px;"><i class="devicon-mongodb-plain colored" style="font-size: 1.2rem;"></i> MongoDB</span>
+            <div class="bar-wrap">
+              <div class="bar-fill" data-w="80"></div>
+            </div><span class="pct">80%</span>
+          </div>
+          <div class="skill-item"><span style="display:flex; align-items:center; gap:6px;"><i class="devicon-tailwindcss-plain colored" style="font-size: 1.2rem;"></i> Tailwind</span>
+            <div class="bar-wrap">
+              <div class="bar-fill" data-w="95"></div>
+            </div><span class="pct">95%</span>
+          </div>
+        </div>
+      </div>
+      <div class="skill-cat glass" data-aos="up" data-aos-delay="200">
+        <h3>📚 Libraries & Frameworks</h3>
+        <div class="skill-items">
+          <div class="skill-item"><span style="display:flex; align-items:center; gap:6px;"><i class="devicon-tensorflow-original colored" style="font-size: 1.2rem;"></i> TensorFlow</span>
+            <div class="bar-wrap">
+              <div class="bar-fill" data-w="85"></div>
+            </div><span class="pct">85%</span>
+          </div>
+          <div class="skill-item"><span style="display:flex; align-items:center; gap:6px;"><i class="devicon-pandas-original colored" style="font-size: 1.2rem;"></i> Pandas/NumPy</span>
+            <div class="bar-wrap">
+              <div class="bar-fill" data-w="88"></div>
+            </div><span class="pct">88%</span>
+          </div>
+          <div class="skill-item"><span style="display:flex; align-items:center; gap:6px;"><i class="devicon-express-original" style="font-size: 1.2rem;"></i> Express.js</span>
+            <div class="bar-wrap">
+              <div class="bar-fill" data-w="82"></div>
+            </div><span class="pct">82%</span>
+          </div>
+          <div class="skill-item"><span style="display:flex; align-items:center; gap:6px;"><i class="devicon-react-original colored" style="font-size: 1.2rem;"></i> React</span>
+            <div class="bar-wrap">
+              <div class="bar-fill" data-w="90"></div>
+            </div><span class="pct">90%</span>
+          </div>
+        </div>
+      </div>
+      <div class="skill-cat glass" data-aos="up" data-aos-delay="300">
+        <h3>🛠 Tools & Others</h3>
+        <div class="skill-items">
+          <div class="skill-item"><span style="display:flex; align-items:center; gap:6px;"><i class="devicon-git-plain colored" style="font-size: 1.2rem;"></i> Git & GitHub</span>
+            <div class="bar-wrap">
+              <div class="bar-fill" data-w="90"></div>
+            </div><span class="pct">90%</span>
+          </div>
+          <div class="skill-item"><span style="display:flex; align-items:center; gap:6px;"><i class="devicon-docker-plain colored" style="font-size: 1.2rem;"></i> Docker</span>
+            <div class="bar-wrap">
+              <div class="bar-fill" data-w="75"></div>
+            </div><span class="pct">75%</span>
+          </div>
+          <div class="skill-item"><span style="display:flex; align-items:center; gap:6px;"><i class="devicon-postman-plain colored" style="font-size: 1.2rem;"></i> Postman</span>
+            <div class="bar-wrap">
+              <div class="bar-fill" data-w="85"></div>
+            </div><span class="pct">85%</span>
+          </div>
+          <div class="skill-item"><span style="display:flex; align-items:center; gap:6px;"><i class="devicon-linux-plain" style="font-size: 1.2rem;"></i> Linux</span>
+            <div class="bar-wrap">
+              <div class="bar-fill" data-w="80"></div>
+            </div><span class="pct">80%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-stack-wrap" data-aos="up">
+      <h3 class="stack-title">Expertise Ecosystem <span class="stack-subtitle">— Core tech across my labs</span></h3>
+      <div class="tech-icons-grid">
+        <div class="ti glass">
+          <span class="ti-emoji">🤖</span>
+          <span>Gemini AI</span>
+        </div>
+        <div class="ti glass">
+          <span class="ti-emoji">⚡</span>
+          <span>Next.js 14</span>
+        </div>
+        <div class="ti glass">
+          <span class="ti-emoji">📦</span>
+          <span>Docker</span>
+        </div>
+        <div class="ti glass">
+          <span class="ti-emoji">🔒</span>
+          <span>Security</span>
+        </div>
+        <div class="ti glass">
+          <span class="ti-emoji">🚀</span>
+          <span>Cloud</span>
+        </div>
+        <div class="ti glass">
+          <span class="ti-emoji">📊</span>
+          <span>Analytics</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED PROJECTS ===== -->
+  <section id="projects" class="section">
+    <div class="scene-mask"></div>
+    <div class="section-header" data-aos="reveal-left"><span class="sec-tag">03.</span>
+      <h2>Featured Work</h2>
+    </div>
+    <div class="featured-projects">
+      <!-- AI Coding Mentor -->
+      <div class="fp-card glass" data-aos="up">
+        <div class="fp-img-wrap">
+          <img src="./assets/images/projects/ai_coding.png" alt="AI Mentor" class="fp-img">
+          <div class="fp-badge-new">Featured</div>
+        </div>
+        <div class="fp-card-content">
+          <div class="fp-top">
+            <span class="fp-icon">🤖</span>
+            <div class="fp-links">
+              <a href="https://github.com/Nitinsingh7643/AI_coding_mentor" target="_blank">Code</a>
+              <a href="#">Demo</a>
+            </div>
+          </div>
+          <h3>AI Coding Mentor</h3>
+          <p>An intelligent platform using <strong>Google Gemini AI</strong> to analyze, debug, and optimize code in
+            real-time. Features adaptive learning paths and Complexity analysis.</p>
+          <div class="fp-features">
+            <span>AI Insight</span>
+            <span>Diff View</span>
+            <span>Optimizer</span>
+          </div>
+          <div class="fp-tags"><span>Node.js</span><span>Gemini AI</span><span>EJS</span></div>
+        </div>
+      </div>
+
+      <!-- DesiFood Hub -->
+      <div class="fp-card glass" data-aos="up" data-aos-delay="100">
+        <div class="fp-img-wrap">
+          <img src="./assets/images/projects/desifood.png" alt="DesiFood" class="fp-img">
+        </div>
+        <div class="fp-card-content">
+          <div class="fp-top">
+            <span class="fp-icon">🍛</span>
+            <div class="fp-links">
+              <a href="https://github.com/Nitinsingh7643/Desi-Food-Hub" target="_blank">Code</a>
+              <a href="https://desifoodhub-api.onrender.com" target="_blank">Live</a>
+            </div>
+          </div>
+          <h3>DesiFood Hub</h3>
+          <p>A high-performance full-stack marketplace with Next.js 14, Razorpay integration, and a dedicated AI
+            assistant for personalized recommendations.</p>
+          <div class="fp-features">
+            <span>Payments</span>
+            <span>AI Chat</span>
+            <span>Dashboard</span>
+          </div>
+          <div class="fp-tags"><span>Next.js</span><span>MongoDB</span><span>Firebase</span></div>
+        </div>
+      </div>
+
+      <!-- CPU Scheduler -->
+      <div class="fp-card glass" data-aos="up">
+        <div class="fp-img-wrap">
+          <img src="./assets/images/projects/cpu_scheduler.png" alt="CPU Scheduler" class="fp-img">
+        </div>
+        <div class="fp-card-content">
+          <div class="fp-top">
+            <span class="fp-icon">⚙️</span>
+            <div class="fp-links">
+              <a href="https://github.com/Sumehar-Singh/Intelligent-CPU-Scheduler" target="_blank">Code</a>
+            </div>
+          </div>
+          <h3>Intelligent CPU Scheduler</h3>
+          <p>A deep-dive visualization tool for OS scheduling algorithms. Built with Python, it provides real-time Gantt
+            chart animations and performance profiling.</p>
+          <div class="fp-features">
+            <span>Gantt Charts</span>
+            <span>Visualization</span>
+            <span>Analysis</span>
+          </div>
+          <div class="fp-tags"><span>Python</span><span>Tkinter</span><span>Matplotlib</span></div>
+        </div>
+      </div>
+
+      <!-- Finance Tracker -->
+      <div class="fp-card glass" data-aos="up" data-aos-delay="100">
+        <div class="fp-img-wrap">
+          <img src="./assets/images/projects/finance.png" alt="Finance" class="fp-img">
+        </div>
+        <div class="fp-card-content">
+          <div class="fp-top">
+            <span class="fp-icon">💰</span>
+            <div class="fp-links">
+              <a href="https://github.com/Nitinsingh7643/FinanceTracker" target="_blank">Code</a>
+            </div>
+          </div>
+          <h3>Finance Tracker</h3>
+          <p>A robust financial management dashboard built with modern PHP. Features secure transaction auditing,
+            dynamic reporting, and multi-user support.</p>
+          <div class="fp-features">
+            <span>Reporting</span>
+            <span>Auth</span>
+            <span>MySQL</span>
+          </div>
+          <div class="fp-tags"><span>PHP</span><span>MySQL</span><span>CSS3</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ALGORITHM VISUALIZER ===== -->
+  <section id="algo-viz" class="section">
+    <div class="scene-mask"></div>
+    <div class="section-header" data-aos="reveal-up"><span class="sec-tag">04.</span>
+      <h2>Algorithm Visualizer</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="algo-container glass">
+      <div class="algo-tabs">
+        <button class="atab active" data-algo="bubble">Bubble Sort</button>
+        <button class="atab" data-algo="selection">Selection Sort</button>
+        <button class="atab" data-algo="insertion">Insertion Sort</button>
+        <button class="atab" data-algo="bfs">BFS Graph</button>
+      </div>
+      <div class="algo-controls">
+        <button id="algo-start" class="btn-glow btn-sm">▶ Start</button>
+        <button id="algo-reset" class="btn-outline btn-sm">↺ Reset</button>
+        <label>Speed: <input type="range" id="algo-speed" min="50" max="1000" value="300" step="50"></label>
+        <label>Size: <input type="range" id="algo-size" min="10" max="60" value="30" step="5"></label>
+      </div>
+      <div id="algo-display">
+        <div id="sort-bars"></div>
+        <div id="bfs-canvas-wrap" style="display:none">
+          <canvas id="bfs-canvas" width="700" height="300"></canvas>
+        </div>
+      </div>
+      <div id="algo-info" class="algo-info-box">Select an algorithm and press Start to visualize!</div>
+    </div>
+  </section>
+
+  <!-- ===== DSA TRACKER ===== -->
+  <section id="dsa" class="section">
+    <div class="scene-mask"></div>
+    <div class="section-header" data-aos="reveal-right"><span class="sec-tag">05.</span>
+      <h2>DSA Mastery</h2>
+    </div>
+    <div class="dsa-grid">
+      <div class="dsa-platform glass" data-aos="up">
+        <span class="dsa-logo">🏆</span>
+        <span class="dsa-num" data-count="300">0</span>
+        <span>Problems Solved</span>
+      </div>
+      <div class="dsa-platform glass" data-aos="up" data-aos-delay="100">
+        <span class="dsa-logo">⬛</span>
+        <span class="dsa-num" data-count="150">0</span>
+        <span>LeetCode Problems</span>
+      </div>
+      <div class="dsa-platform glass" data-aos="up" data-aos-delay="200">
+        <span class="dsa-logo">🟩</span>
+        <span class="dsa-num" data-count="100">0</span>
+        <span>GFG Successes</span>
+      </div>
+      <div class="dsa-platform glass" data-aos="up" data-aos-delay="300">
+        <span class="dsa-logo">⭐</span>
+        <span class="dsa-num" data-count="5">0</span>
+        <span>Star Coder</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education" class="section">
+    <div class="scene-mask"></div>
+    <div class="section-header" data-aos="reveal-up"><span class="sec-tag">06.</span>
+      <h2>Education</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card glass">
+        <div class="edu-icon">🎓</div>
+        <h3>B.Tech in Computer Science</h3>
+        <p class="edu-sub">Lovely Professional University, Punjab</p>
+        <p class="edu-year">2023 – 2027</p>
+        <p>Specializing in AI and Machine Learning. Relevant coursework: Data Structures, Algorithms, DBMS. CGPA:
+          8.80/10</p>
+      </div>
+      <div class="edu-card glass">
+        <div class="edu-icon">📚</div>
+        <h3>Intermediate (XII)</h3>
+        <p class="edu-sub">Shri Shankar College, Sasaram</p>
+        <p class="edu-year">2020 – 2022</p>
+        <p>PCM Stream — Scored 82%. Strengthened core foundations in Mathematics and Science.</p>
+      </div>
+      <div class="edu-card glass">
+        <div class="edu-icon">🏫</div>
+        <h3>Matriculation (X)</h3>
+        <p class="edu-sub">Pragya Niketan Public School, Sasaram</p>
+        <p class="edu-year">2019 – 2020</p>
+        <p>Scored 92.8%. Developed early interest in logical reasoning and problem solving.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS & CERTIFICATIONS ===== -->
+  <section id="achievements" class="section">
+    <div class="scene-mask"></div>
+    <div class="section-header" data-aos="reveal-right"><span class="sec-tag">07.</span>
+      <h2>Recognition</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="ach-grid">
+      <div class="ach-card glass">
+        <div class="ach-icon">🏆</div>
+        <h4>5★ on HackerRank</h4>
+        <p>Problem Solving & Data Structures (C++)</p>
+      </div>
+      <div class="ach-card glass">
+        <div class="ach-icon">⭐</div>
+        <h4>District GK Topper</h4>
+        <p>3rd Rank, recognized by DM Rohtas</p>
+      </div>
+      <div class="ach-card glass">
+        <div class="ach-icon">🚀</div>
+        <h4>Bytebash Hackathon</h4>
+        <p>Top 20 Position (Oct 2023)</p>
+      </div>
+
+      <div class="ach-card glass">
+        <div class="ach-icon">🎯</div>
+        <h4>500+ DSA Problems</h4>
+        <p>Solved across various platforms</p>
+      </div>
+      <div class="ach-card glass">
+        <div class="ach-icon">💡</div>
+        <h4>Open Source Contributor</h4>
+        <p>Passionate about community tools</p>
+      </div>
+    </div>
+    <div class="cert-grid">
+      <h3 class="stack-title">Certifications</h3>
+      <div class="cert-cards">
+        <a href="https://drive.google.com/file/d/15SSIdXIdXKDMT6KaiMwFUvBDSIxwAFRP/view?usp=sharing" target="_blank"
+          rel="noopener" class="cert-card glass">
+          <div class="cert-badge">📜</div>
+          <h4>Advanced Social Networks</h4>
+          <p>NPTEL / IIT</p><span class="cert-year">2025</span>
+        </a>
+        <a href="https://www.coursera.org/account/accomplishments/certificate/GPKZE5YA2TVH" target="_blank"
+          rel="noopener" class="cert-card glass">
+          <div class="cert-badge">📜</div>
+          <h4>SQL for Data Science</h4>
+          <p>Coursera / UC Davis</p><span class="cert-year">2024</span>
+        </a>
+        <a href="https://freecodecamp.org/certification/nitinkumar7643/responsive-web-design" target="_blank"
+          rel="noopener" class="cert-card glass">
+          <div class="cert-badge">📜</div>
+          <h4>Responsive Web Design</h4>
+          <p>FreeCodeCamp</p><span class="cert-year">2023</span>
+        </a>
+        <a href="https://www.coursera.org/account/accomplishments/certificate/R1K4BEG13QWW" target="_blank"
+          rel="noopener" class="cert-card glass">
+          <div class="cert-badge">📜</div>
+          <h4>Technical Support Fundamentals</h4>
+          <p>Google / Coursera</p><span class="cert-year">2024</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ===== TERMINAL ===== -->
+  <section id="terminal" class="section">
+    <div class="scene-mask"></div>
+    <div class="section-header" data-aos="reveal-left"><span class="sec-tag">08.</span>
+      <h2>Interactive Terminal</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="terminal-wrap glass">
+      <div class="term-top"><span class="dot red"></span><span class="dot yellow"></span><span
+          class="dot green"></span><span class="term-title">nitin@portfolio:~</span></div>
+      <div class="term-body" id="term-body">
+        <div class="term-line"><span class="term-prompt">nitin@portfolio:~$</span> <span class="term-out">Type
+            <b>help</b> to see available commands</span></div>
+      </div>
+      <div class="term-input-row">
+        <span class="term-prompt">nitin@portfolio:~$</span>
+        <input type="text" id="term-input" placeholder="Type a command..." autocomplete="off" spellcheck="false">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section">
+    <div class="scene-mask"></div>
+    <div class="section-header" data-aos="reveal-up"><span class="sec-tag">09.</span>
+      <h2>Get In Touch</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info" data-aos="right">
+        <h3>Let's build the future together</h3>
+        <p>I'm always open to new opportunities, collaborations, or just a good discussion about AI and engineering.</p>
+        <div class="contact-links">
+          <a href="mailto:nitinsingh6207816283@gmail.com" class="cl-item glass">
+            <b>Email</b>
+            <span>nitinsingh6207816283@gmail.com</span>
+          </a>
+          <a href="https://github.com/Nitinsingh7643" target="_blank" class="cl-item glass">
+            <b>GitHub</b>
+            <span>github.com/Nitinsingh7643</span>
+          </a>
+        </div>
+      </div>
+      <form class="contact-form glass" data-aos="left">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn-glow">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="footer-logo">&lt;NS /&gt;</div>
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#projects">Work</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p>© 2026 Nitin Singh. Designed for the future.</p>
+  </footer>
+
+  <!-- Toast -->
+  <div id="toast"></div>
+
+  <script src="./assets/js/portfolio.js?v=3.1"></script>
+</body>
+
+</html>
