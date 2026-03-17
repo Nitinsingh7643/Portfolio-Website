@@ -171,12 +171,21 @@ sectionEls.forEach(s => navObserver.observe(s));
 /* ==========================================
    TYPEWRITER
    ========================================== */
-const roles = ['AI Developer', 'Software Engineer', 'Problem Solver', 'DSA Enthusiast', 'Open Source Contributor'];
+const roles = ['Software Engineer', 'AI Developer', 'Problem Solver', 'DSA Enthusiast', 'Open Source Contributor'];
 let ri = 0, ci = 0, del = false, td = 120;
 const typedEl = document.getElementById('typed-role');
+const prefixEl = document.getElementById('typed-prefix');
+
 function type() {
   if (!typedEl) return;
   const cur = roles[ri];
+  
+  // Update a/an prefix dynamically
+  if (prefixEl && ci === 0 && !del) {
+    const firstChar = cur.charAt(0).toUpperCase();
+    prefixEl.textContent = ['A', 'E', 'I', 'O', 'U'].includes(firstChar) ? 'an' : 'a';
+  }
+
   if (del) {
     typedEl.textContent = cur.slice(0, --ci);
     td = 60;
