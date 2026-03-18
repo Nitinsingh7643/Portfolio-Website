@@ -713,8 +713,9 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 /* ==========================================
    ENTRY ANIMATIONS
    ========================================== */
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
   document.body.classList.add('loaded');
+  
   // Hero reveal logic
   const heroItems = document.querySelectorAll('.hero-content > *');
   heroItems.forEach((el, i) => {
@@ -724,4 +725,8 @@ window.addEventListener('load', () => {
       el.style.transition = '0.8s cubic-bezier(0.25, 0.8, 0.25, 1)';
     }, 200 + (i * 100));
   });
+});
+
+window.addEventListener('load', () => {
+  // Any resource-heavy init can go here if needed
 });
